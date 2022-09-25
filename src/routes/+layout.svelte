@@ -9,7 +9,7 @@
 		<!-- Navbar -->
 		<div class="w-full navbar bg-base-300">
 			<div class="flex-1 px-2 mx-2">Aljaz.dev</div>
-			<div class="flex-none hidden lg:block">
+			<divj class="flex-none hidden lg:block">
 				<ul class="menu menu-horizontal">
 					<!-- Navbar menu content here -->
 					<li class="menu-title">
@@ -24,7 +24,7 @@
 					<li><a>Komponente</a></li>
 					<li><a>Dodatno</a></li>
 				</ul>
-			</div>
+			</divj>
 			<div class="flex-none lg:hidden">
 				<label for="my-drawer-3" class="btn btn-square btn-ghost">
 					<svg
@@ -47,10 +47,8 @@
 		</main>
 		<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
 			<div class="grid grid-flow-col gap-4">
-				<a class="link link-hover">About us</a>
-				<a class="link link-hover">Contact</a>
-				<a class="link link-hover">Jobs</a>
-				<a class="link link-hover">Press kit</a>
+				<a href="/about" class="link link-hover">About us</a>
+				<a href="/contact" class="link link-hover">Contact</a>
 			</div>
 			<div>
 				<div class="grid grid-flow-col gap-4">
