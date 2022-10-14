@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
@@ -7,10 +6,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div
-	class="hero min-h-[calc(100vh-theme(spacing.16))]"
-	style="background-image: url(https://placeimg.com/1000/800/arch);"
->
+<div class="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
 	<div class="hero-overlay bg-opacity-60" />
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
