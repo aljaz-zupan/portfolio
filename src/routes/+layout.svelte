@@ -5,7 +5,7 @@
 </script>
 
 <main>
-	<div class="wrapper max-h-full">
+	<div class="h-full overflow-y-scroll">
 		<div class="content max-h-full overflow-auto">
 			<slot />
 		</div>
