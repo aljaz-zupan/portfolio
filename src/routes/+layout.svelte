@@ -5,21 +5,18 @@
 </script>
 
 <main>
-	<div class="wrapper min-h-screen">
-		<div class="content h-max">
+	<div class="wrapper max-h-full">
+		<div class="content max-h-full overflow-auto">
 			<slot />
 		</div>
 		<Footer />
 	</div>
+	<Menu />
 </main>
-<Menu />
 
 <style>
 	:global(body, html) {
 		height: 100%;
 		overflow: hidden;
-	}
-	main {
-		overflow: auto;
 	}
 </style>
