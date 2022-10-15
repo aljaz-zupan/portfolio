@@ -18,4 +18,7 @@
 	:global(html, body) {
 		height: 100%;
 	}
+	:global(#app) {
+		height: 100%;
+	}
 </style>
