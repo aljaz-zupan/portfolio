@@ -6,7 +6,7 @@
 
 <main class="">
 	<div class="h-full overflow-y-scroll">
-		<div class="content max-h-full overflow-auto">
+		<div class="content overflow-auto">
 			<slot />
 		</div>
 		<Footer />
