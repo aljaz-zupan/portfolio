@@ -4,7 +4,10 @@
 <div class="menu fixed bottom-2 right-2">
 	<div class="m-6 dropdown dropdown-top dropdown-end">
 		<!-- svelte-ignore a11y-label-has-associated-control -->
-		<label tabindex="0" class="btn btn-ghost bg-primary hover:bg-primary-focus btn-circle">
+		<label
+			tabindex="0"
+			class="btn btn-ghost bg-primary hover:bg-primary-focus btn-circle hover:drop-shadow-2xl hover:animate-bounce duration-300"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-5 w-5"
