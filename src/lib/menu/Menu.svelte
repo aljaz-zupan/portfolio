@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="menu fixed bottom-4 right-4">
+<div class="menu absolute bottom-4 right-4">
 	<div class="m-6 dropdown dropdown-top dropdown-end">
 		<!-- svelte-ignore a11y-label-has-associated-control -->
 		<label tabindex="0" class="btn btn-ghost bg-primary hover:bg-primary-focus btn-circle">
