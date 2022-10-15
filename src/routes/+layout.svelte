@@ -15,4 +15,7 @@
 </main>
 
 <style>
+	:global(html, body, body > div, body > div > main) {
+		height: 100%;
+	}
 </style>
