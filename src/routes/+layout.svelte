@@ -11,7 +11,5 @@
 		</div>
 		<Footer />
 	</div>
-	<div class="menu fixed bottom-4 right-4">
-		<Menu />
-	</div>
+	<Menu />
 </main>
