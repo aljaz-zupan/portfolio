@@ -11,14 +11,15 @@
 		</div>
 		<Footer />
 	</div>
-	<Menu />
 </main>
+<Menu />
 
 <style>
-	:global(html, body) {
+	:global(body, html) {
 		height: 100%;
+		overflow: hidden;
 	}
-	:global(#app) {
-		height: 100%;
+	main {
+		overflow: auto;
 	}
 </style>
