@@ -4,15 +4,11 @@
 	import Footer from '$lib/footer/Footer.svelte';
 </script>
 
-<main class="">
-	<div class="h-full overflow-y-scroll">
-		<div class="content overflow-auto">
-			<slot />
-		</div>
-		<Footer />
-	</div>
-	<Menu />
+<main>
+	<slot />
+	<Footer />
 </main>
+<Menu />
 
 <style>
 	:global(html, body, body > div, body > div > main) {
