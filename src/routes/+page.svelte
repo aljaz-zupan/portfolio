@@ -3,7 +3,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Portfolio" />
 </svelte:head>
 
 <div class="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">

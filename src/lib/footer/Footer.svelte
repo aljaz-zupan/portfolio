@@ -3,7 +3,7 @@
 
 <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
 	<div class="grid grid-flow-col gap-4">
-		<a href="/about" class="link link-hover">About us</a>
+		<a href="/about" class="link link-hover">About me</a>
 		<a href="/contact" class="link link-hover">Contact</a>
 	</div>
 	<div>

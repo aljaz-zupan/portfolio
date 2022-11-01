@@ -1,15 +1,16 @@
+<script lang="ts">
+	import Article from '$lib/articles/Article.svelte';
+</script>
+
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>About me</title>
+	<meta name="description" content="About me" />
 </svelte:head>
 
-<div class="content">
-	<h1>About this app</h1>
+<Article>
+	<h1>About me</h1>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
+	<p>I like new tehnologies.</p>
 
 	<pre>npm create svelte@latest</pre>
 
@@ -23,7 +24,7 @@
 		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
 		it with JavaScript disabled!
 	</p>
-</div>
+</Article>
 
 <style>
 	.content {

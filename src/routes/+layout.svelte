@@ -2,6 +2,8 @@
 	import '../app.css';
 	import Menu from '$lib/menu/Menu.svelte';
 	import Footer from '$lib/footer/Footer.svelte';
+
+	import { page } from '$app/stores';
 </script>
 
 <main>
