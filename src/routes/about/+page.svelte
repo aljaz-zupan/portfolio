@@ -12,7 +12,7 @@
 
 	<p>I like new tehnologies.</p>
 
-	<pre>npm create svelte@latest</pre>
+	<pre class="w-min">npm create svelte@latest</pre>
 
 	<p>
 		The page you're looking at is purely static HTML, with no client-side interactivity needed.
