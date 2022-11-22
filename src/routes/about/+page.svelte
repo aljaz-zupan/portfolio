@@ -10,7 +10,10 @@
 <Article>
 	<h1>About me</h1>
 
-	<p>I like new tehnologies.</p>
+	<p>
+		I love new tehnologies. I addore experementing with new software and incorporating it in my
+		workflow. So in retrospect I try to learn as much as I can.
+	</p>
 
 	<pre class="w-min">npm create svelte@latest</pre>
 
@@ -27,9 +30,4 @@
 </Article>
 
 <style>
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
 </style>

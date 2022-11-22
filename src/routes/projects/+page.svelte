@@ -1,63 +1,37 @@
 <script lang="ts">
 	import Article from '$lib/articles/Article.svelte';
-	import { CircleBufferGeometry, MeshStandardMaterial, BoxBufferGeometry, DoubleSide } from 'three';
-	import { DEG2RAD } from 'three/src/math/MathUtils';
+	import { GLTF } from '@threlte/extras';
 	import {
 		AmbientLight,
 		Canvas,
 		DirectionalLight,
-		Group,
-		HemisphereLight,
-		Mesh,
+		SpotLight,
 		OrbitControls,
 		PerspectiveCamera
 	} from '@threlte/core';
 	import { spring } from 'svelte/motion';
 
 	const scale = spring(1);
+	const mobilePhone = '3d/huawei_mate40pro/scene.gltf';
+	let mesh;
 </script>
 
 <Article>
 	<h1>Projects</h1>
-	<h2>Trelte</h2>
-	<h3>Cube</h3>
-	<p>Some cube experiment.</p>
-
+	<p>This is a page of project and experiments I have done, will do and would like to do</p>
+	<h2>Trelte and three.js</h2>
+	<h3>Product 3D</h3>
 	<div class="mockup-window border bg-base-300">
 		<Canvas>
-			<PerspectiveCamera position={{ x: 10, y: 10, z: 10 }} fov={24}>
-				<OrbitControls
-					maxPolarAngle={DEG2RAD * 80}
-					autoRotate={false}
-					enableZoom={false}
-					target={{ y: 0.5 }}
-				/>
+			<PerspectiveCamera position={{ x: 0, y: 0, z: 0.6 }}>
+				<OrbitControls autoRotate={true} enableZoom={true} target={{ y: 0 }} />
 			</PerspectiveCamera>
-
+			<GLTF position={{ x: 0, y: -0.2, z: 0 }} url={mobilePhone} scale="20" bind:mesh />
 			<DirectionalLight shadow position={{ x: 3, y: 10, z: 10 }} />
-			<DirectionalLight position={{ x: -3, y: 10, z: -10 }} intensity={0.2} />
-			<AmbientLight intensity={0.2} />
-
-			<!-- Cube -->
-			<Group scale={$scale}>
-				<Mesh
-					interactive
-					on:pointerenter={() => ($scale = 2)}
-					on:pointerleave={() => ($scale = 1)}
-					position={{ y: 0.5 }}
-					castShadow
-					geometry={new BoxBufferGeometry(1, 1, 1)}
-					material={new MeshStandardMaterial({ color: '#333333' })}
-				/>
-			</Group>
-
-			<!-- Floor -->
-			<Mesh
-				receiveShadow
-				rotation={{ x: -90 * (Math.PI / 180) }}
-				geometry={new CircleBufferGeometry(3, 72)}
-				material={new MeshStandardMaterial({ side: DoubleSide, color: 'white' })}
-			/>
+			<DirectionalLight position={{ x: -3, y: 7, z: -10 }} intensity={0.6} />
+			<DirectionalLight position={{ x: -3, y: 6, z: -10 }} intensity={0.6} />
+			<SpotLight position={{ x: -3, y: 3, z: -13 }} target={mesh} />
+			<AmbientLight intensity={1} />
 		</Canvas>
 	</div>
 	<h2>Svelte</h2>
@@ -66,8 +40,7 @@
 </Article>
 
 <style>
-	div,
-	canvas {
+	div {
 		height: 35rem;
 		width: 100%;
 	}
