@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Article from '$lib/articles/Article.svelte';
-	import { scaleFly } from '$lib/animations/scaleFly.js';
-
+	import { scaleFly } from '$lib/animations/scaleFly';
 	import IntersectionObserver from 'svelte-intersection-observer';
 
 	let node: HTMLElement;
