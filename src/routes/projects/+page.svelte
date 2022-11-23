@@ -9,9 +9,6 @@
 		OrbitControls,
 		PerspectiveCamera
 	} from '@threlte/core';
-	import { spring } from 'svelte/motion';
-
-	const scale = spring(1);
 	const mobilePhone = '3d/huawei_mate40pro/scene.gltf';
 	let mesh;
 </script>
