@@ -32,9 +32,6 @@
 		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
 		it with JavaScript disabled!
 	</p>
-</Article>
-
-<!-- <Article>
 	<div class="h-screen flex justify-content text-center items-center">
 		<div bind:this={node} class="overflow-hidden">
 			<IntersectionObserver element={node} let:intersecting threshold={treshholdValue}>
@@ -50,6 +47,7 @@
 			</IntersectionObserver>
 		</div>
 	</div>
-</Article> -->
+</Article>
+
 <style>
 </style>

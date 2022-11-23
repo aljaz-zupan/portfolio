@@ -10,7 +10,6 @@
 		PerspectiveCamera,
 		type Scale
 	} from '@threlte/core';
-	import type { Object3D } from 'three';
 	import type { Mesh } from 'three';
 	const mobilePhone = '3d/huawei_mate40pro/scene.gltf';
 	let mesh: Mesh;
