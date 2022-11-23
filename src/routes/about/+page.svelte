@@ -33,7 +33,8 @@
 		it with JavaScript disabled!
 	</p>
 </Article>
-<Article>
+
+<!-- <Article>
 	<div class="h-screen flex justify-content text-center items-center">
 		<div bind:this={node} class="overflow-hidden">
 			<IntersectionObserver element={node} let:intersecting threshold={treshholdValue}>
@@ -49,7 +50,6 @@
 			</IntersectionObserver>
 		</div>
 	</div>
-</Article>
-
+</Article> -->
 <style>
 </style>
