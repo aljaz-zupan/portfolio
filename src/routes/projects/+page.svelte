@@ -7,10 +7,14 @@
 		DirectionalLight,
 		SpotLight,
 		OrbitControls,
-		PerspectiveCamera
+		PerspectiveCamera,
+		type Scale
 	} from '@threlte/core';
+	import type { Object3D } from 'three';
+	import type { Mesh } from 'three';
 	const mobilePhone = '3d/huawei_mate40pro/scene.gltf';
-	let mesh;
+	let mesh: Mesh;
+	let scaleValue: Scale = 1;
 </script>
 
 <Article>
@@ -23,7 +27,7 @@
 			<PerspectiveCamera position={{ x: 0, y: 0, z: 0.6 }}>
 				<OrbitControls autoRotate={true} enableZoom={true} target={{ y: 0 }} />
 			</PerspectiveCamera>
-			<GLTF position={{ x: 0, y: -0.2, z: 0 }} url={mobilePhone} scale="20" bind:mesh />
+			<GLTF position={{ x: 0, y: -0.2, z: 0 }} url={mobilePhone} scale={scaleValue} bind:mesh />
 			<DirectionalLight shadow position={{ x: 3, y: 10, z: 10 }} />
 			<DirectionalLight position={{ x: -3, y: 7, z: -10 }} intensity={0.6} />
 			<DirectionalLight position={{ x: -3, y: 6, z: -10 }} intensity={0.6} />

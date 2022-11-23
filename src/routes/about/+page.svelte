@@ -4,6 +4,7 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 
 	let node: HTMLElement;
+	let treshholdValue = 0.2;
 </script>
 
 <svelte:head>
@@ -35,7 +36,7 @@
 <Article>
 	<div class="h-screen flex justify-content text-center items-center">
 		<div bind:this={node} class="overflow-hidden">
-			<IntersectionObserver element={node} let:intersecting threshold="0.2">
+			<IntersectionObserver element={node} let:intersecting threshold={treshholdValue}>
 				{#if intersecting}
 					<div transition:scaleFly class:intersecting>
 						<h2>Naslov</h2>
