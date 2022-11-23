@@ -1,5 +1,6 @@
 <script lang="ts">
 	import IntersectionObserver from 'svelte-intersection-observer';
+	import { scaleFly } from '$lib/animations/scaleFly';
 
 	import { fly, fade } from 'svelte/transition';
 	let node: HTMLElement;
@@ -16,7 +17,7 @@
 			<a href="/contact" class="link link-hover">Contact</a>
 		</div>
 		{#if intersecting}
-			<div transition:fade={{ delay: 500 }}>
+			<div transition:scaleFly>
 				<div class="grid grid-flow-col gap-4">
 					<a href="https://github.com/aljaz-zupan">
 						<svg
