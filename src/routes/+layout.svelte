@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '../app.css';
-	import Menu from '$lib/menu/Menu.svelte';
+	import Navbar from '$lib/menu/Navbar.svelte';
 </script>
 
-<Menu />
+<Navbar />
 
-<div>
+<div class="prose container mx-2xl">
 	<slot />
 </div>
 
