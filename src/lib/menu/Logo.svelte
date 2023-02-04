@@ -1,5 +1,7 @@
 <script lang="ts">
-	let title = 'My logo';
+	export let title: string = 'My logo';
 </script>
 
-<a href="\">{title}</a>
+<a href="/">{title}</a>
+
+<style></style>

@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let navigationItems: any;
+	type NavigationItem = {
+		title: string;
+		url: string;
+	};
+	export let navigationItems: Array<NavigationItem>;
 </script>
 
 <ul class="grid grid-flow-col auto-cols-max gap-4">
