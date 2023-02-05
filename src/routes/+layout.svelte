@@ -5,7 +5,7 @@
 
 <Navbar />
 
-<div class="prose container mx-2xl">
+<div class="prose md:mx-auto md:max-w-3xl px-4 md:px-0 py-4">
 	<slot />
 </div>
 

@@ -22,8 +22,8 @@
 	];
 </script>
 
-<nav class="bg-red-200 w-full">
-	<ul class="grid grid-flow-col justify-content max-w-2xl">
+<nav class="bg-base-200 w-full px-4 py-4">
+	<ul class="grid grid-flow-col space-between md:max-w-3xl md:mx-auto">
 		<Logo />
 		<Navigation {navigationItems} />
 	</ul>
