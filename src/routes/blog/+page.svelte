@@ -86,14 +86,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 	<li>Et, possimus eum.</li>
 </ul>
 
-<Highlight language={typescript} {code} langtag />
+<Highlight language={typescript} {code} />
 
 <blockquote>
 	Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis distinctio non expedita ut
 	nobis accusantium a voluptatibus cum, necessitatibus, reprehenderit accusamus quas!
 </blockquote>
 
-<Highlight language={xml} code={code2} langtag />
+<Highlight language={xml} code={code2} />
 
 <ol>
 	<li>
@@ -107,7 +107,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 	<li>Quidem mollitia eius officiis?</li>
 </ol>
 
-<Highlight language={dart} code={code3} langtag />
+<Highlight language={dart} code={code3} />
 
 <style>
 	:global(code.hljs) {
