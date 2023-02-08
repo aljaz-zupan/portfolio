@@ -1,7 +1,13 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import '../app.css';
 	import Navbar from '$lib/menu/Navbar.svelte';
 	import Drawer from '$lib/menu/Drawer.svelte';
+
+	const un = page.subscribe((value) => {
+		console.log(value);
+	});
 </script>
 
 <div class="drawer drawer-end">
@@ -9,9 +15,13 @@
 	<div class="drawer-content flex flex-col">
 		<Navbar />
 		<!-- Page content here -->
-		<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
+		{#if $page.route.id === '/'}
 			<slot />
-		</div>
+		{:else}
+			<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
+				<slot />
+			</div>
+		{/if}
 	</div>
 	<Drawer />
 </div>
