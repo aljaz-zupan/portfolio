@@ -4,7 +4,9 @@
 	<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-center">
 		<h1>Aljaž's studio</h1>
 		<h4>Where caffine addiction begins</h4>
-		<p>See where caffine, development, technologies and attemps to comedy merge in one place.</p>
+		<p>
+			See where caffine, development, new technologies and attemps at comedy merge in one person.
+		</p>
 	</div>
 </div>
 <div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
