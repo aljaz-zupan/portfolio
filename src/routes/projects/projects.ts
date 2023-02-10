@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
     title: string,
     categories: Array<string>,
     description: string,
@@ -10,7 +10,7 @@ export const projects: Array<Project> = [
     {
         title: "Supabase",
         categories: ["database", "auth"],
-        description: "Try this firebase alternative",
+        description: "Trythis firebase alternative",
         website: "https://supabase.com/",
         done: false
     },
