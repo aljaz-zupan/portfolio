@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { projects } from "./projects";}
-	import type {Project} from './projects'
+	import { projects } from './projects';
 </script>
 
 <h1>Projects</h1>
@@ -10,12 +9,9 @@
 <ul>
 	{#each projects as project}
 		<li>
-			{project.title}
-			{project.description}
-			{project.website}
+			<b class="color-red-300">{project.title}</b> - {project.description} [<a
+				href={project.website}>{project.website}</a
+			>]
 		</li>
 	{/each}
-</ul>
-<ul>
-	<li>Product cards</li>
 </ul>
