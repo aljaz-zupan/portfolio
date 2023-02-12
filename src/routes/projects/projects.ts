@@ -10,7 +10,7 @@ export const projects: Array<Project> = [
     {
         title: "Supabase",
         categories: ["database", "auth"],
-        description: "Trythis firebase alternative",
+        description: "Try this firebase alternative",
         website: "https://supabase.com/",
         done: false
     },
@@ -38,7 +38,7 @@ export const projects: Array<Project> = [
     {
         title: "Redis",
         categories: ["database", "cache"],
-        description: "Add cacheing to your projects, not as main database",
+        description: "Add cacheing to your projects, not intended as a main database",
         website: "https://redis.io/",
         done: false
     },
