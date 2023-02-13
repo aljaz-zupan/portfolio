@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
-	<h2>Welcome to my portfolio</h2>
+	<h2 class="mt-8">Welcome to my portfolio</h2>
 	<p>
 		Hello there! I'm a code wizard, caffeine addict, and occasional comedian. My keyboard and I have
 		been conjuring up websites, applications, and software like magic. I may not be able to summon a
