@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	let navigationItems = [
 		{
 			title: 'Home',
@@ -28,5 +29,7 @@
 </script>
 
 {#each navigationItems as { title, url }}
-	<li><a href={url} on:click={getMenuState}>{title}</a></li>
+	<li class:bordered={$page.route.id === url}>
+		<a href={url} on:click={getMenuState}>{title}</a>
+	</li>
 {/each}

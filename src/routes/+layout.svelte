@@ -4,10 +4,6 @@
 	import '../app.css';
 	import Navbar from '$lib/menu/Navbar.svelte';
 	import Drawer from '$lib/menu/Drawer.svelte';
-
-	const un = page.subscribe((value) => {
-		console.log(value);
-	});
 </script>
 
 <div class="drawer drawer-end">
