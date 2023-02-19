@@ -33,7 +33,8 @@ export const actions: Actions = {
 			console.log(res);
 			if (res.status !== 200) {
 				return {
-					succes: false
+					message: 'Form was not submited',
+					type: 'error'
 				};
 			}
 		} catch (err: any) {
