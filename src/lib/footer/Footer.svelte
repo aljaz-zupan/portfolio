@@ -4,10 +4,10 @@
 	const currentYear = todaysDate.getFullYear();
 </script>
 
-<footer class="footer items-center p-4 bg-neutral text-neutral-content">
+<footer class="footer items-center p-4 bg-base-300 text-neutral-content mt-auto">
 	<div class="items-center grid-flow-col">
 		<Logo />
-		<p>Copyright © {currentYear} - All right reserved</p>
+		<p>Copyright © {currentYear}</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		<a href=""

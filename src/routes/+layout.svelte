@@ -14,9 +14,11 @@
 
 		<!-- Page content here -->
 		{#if $page.route.id === '/'}
-			<slot />
+			<div>
+				<slot />
+			</div>
 		{:else}
-			<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left min-h-full">
+			<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
 				<slot />
 			</div>
 		{/if}

@@ -1,7 +1,10 @@
 <script lang="ts">
 </script>
 
-<div class="hero min-h-screen" style="background-image: url(/hero-image.jpg);">
+<div
+	class="hero min-h-screen bg-[right_-10rem_bottom] sm:bg-right-bottom"
+	style="background-image: url(/hero-image.webp);"
+>
 	<div class="hero-overlay bg-opacity-70" />
 	<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-center">
 		<h1>Aljaž Zupan</h1>
@@ -26,5 +29,4 @@
 		unicorn, but I can make a website load faster than one. So sit back, relax, and enjoy the show
 		as I present to you my skills, experience, and probably a few jokes.
 	</p>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 </div>

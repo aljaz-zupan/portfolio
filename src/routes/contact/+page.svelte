@@ -15,7 +15,7 @@
 		</label>
 		<input
 			type="text"
-			placeholder="Fireship"
+			placeholder="I am batman"
 			class="input input-bordered w-full max-w-xs"
 			name="name"
 			id="name"
@@ -33,7 +33,7 @@
 		</label>
 		<input
 			type="text"
-			placeholder="me@me.me"
+			placeholder="info@bat.cave"
 			class="input input-bordered w-full max-w-xs"
 			name="email"
 			id="email"

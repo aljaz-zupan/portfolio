@@ -29,7 +29,10 @@
 </script>
 
 {#each navigationItems as { title, url }}
-	<li class:bordered={$page.route.id === url}>
+	<li
+		class:bordered={$page.route.id === url ||
+			(url === '/blog' && $page.route.id === '/blog/[slug]')}
+	>
 		<a href={url} on:click={getMenuState}>{title}</a>
 	</li>
 {/each}
