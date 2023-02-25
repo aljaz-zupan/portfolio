@@ -7,7 +7,7 @@
 		<h1>Aljaž Zupan</h1>
 		<h4>Where caffine addiction begins</h4>
 		<p>
-			Linux enthusiast, and trusted steed with the name "Open-Horse", continue to explore the
+			Linux enthusiast, and his trusted steed with the name "Open-Horse", continue to explore the
 			intersection of caffeine-fueled development, cutting-edge technologies, and attempts at
 			comedy. Together, they traverse the vast digital terrain of programming, overcoming obstacles
 			and blazing new trails.
