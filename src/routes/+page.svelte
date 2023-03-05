@@ -1,4 +1,5 @@
 <script lang="ts">
+	import inView from '$lib/inView/inView';
 </script>
 
 <div
@@ -21,7 +22,12 @@
 		</p> -->
 	</div>
 </div>
-<div class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left">
+<div
+	class="prose md:w-full md:mx-auto md:max-w-3xl px-4 md:px-0 py-4 text-left"
+	use:inView={{ bottom: 300 }}
+	on:enter={() => console.log('enter')}
+	on:exit={() => console.log('exit')}
+>
 	<h2 class="mt-8">Welcome to my portfolio</h2>
 	<p>
 		Hello there! I'm a code wizard, caffeine addict, and occasional comedian. My keyboard and I have
