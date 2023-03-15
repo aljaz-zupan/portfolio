@@ -58,11 +58,11 @@ export const projects: Array<Project> = [
 		done: false
 	},
 	{
-		title: 'Threlte',
+		title: 'Threejs',
 		categories: ['3d'],
 		description:
-			'Renderer and component library for Svelte to build and render three.js scenes declaratively and state-driven in Svelte apps',
-		website: 'https://threlte.xyz/',
+			'Three.js is a cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser using WebGL.',
+		website: 'https://threejs.org/',
 		done: false
 	}
 ];

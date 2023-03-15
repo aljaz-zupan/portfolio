@@ -1,12 +1,16 @@
+// src/routes/[slug].ts
 import { error } from '@sveltejs/kit';
+import { posts } from '../posts';
 
 /** @type {import('./$types').PageLoad} */
-export function load({ params }) {
-	if (params.slug === 'first') {
+export async function load({ params }) {
+	const post = posts.find((post) => post.slug === params.slug);
+
+	if (post) {
 		return {
-			title: 'Hello first post!',
-			date: '25. 2. 2023',
-			content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
+			props: {
+				post
+			}
 		};
 	}
 

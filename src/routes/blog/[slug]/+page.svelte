@@ -1,10 +1,10 @@
+<!-- src/routes/[slug].svelte -->
 <script lang="ts">
-	import type { PageData } from './$types';
-	export let data: PageData;
+	export let post;
 </script>
 
 <article>
-	<h1>{data.title}</h1>
-	<p>Published: {data.date}</p>
-	<div>{@html data.content}</div>
+	<h1>{post.title}</h1>
+	<time>{post.date}</time>
+	<div>{@html post.content}</div>
 </article>
