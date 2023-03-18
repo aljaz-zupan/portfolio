@@ -5,7 +5,7 @@ import { posts } from '../posts';
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 	const post = posts.find((post) => post.slug === params.slug);
-
+	console.log('post:', post);
 	if (post) {
 		return {
 			props: {
