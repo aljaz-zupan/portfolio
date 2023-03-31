@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { ActionData } from './$types';
-	export let form: ActionData;
+	export let form;
 
 	$: console.log(form);
 </script>
@@ -15,7 +14,7 @@
 		</label>
 		<input
 			type="text"
-			placeholder="I am batman"
+			placeholder="Bob Ross"
 			class="input input-bordered w-full max-w-xs"
 			name="name"
 			id="name"
@@ -33,7 +32,7 @@
 		</label>
 		<input
 			type="text"
-			placeholder="info@bat.cave"
+			placeholder="info@example.com"
 			class="input input-bordered w-full max-w-xs"
 			name="email"
 			id="email"
@@ -47,14 +46,14 @@
 	</div>
 	<div class="form-control w-full max-w-xs">
 		<label class="label" for="message">
-			<span class="label-text">What is your name?</span>
+			<span class="label-text">Tell me someting...</span>
 		</label>
 		<textarea
 			class="textarea textarea-bordered h-24"
 			name="message"
 			id="message"
 			value={form?.data?.message ?? ''}
-			placeholder="This is my message"
+			placeholder="Something..."
 		/>
 		{#if form?.errors?.message}
 			<label class="label" for="name">
