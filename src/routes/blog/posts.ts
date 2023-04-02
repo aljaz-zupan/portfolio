@@ -18,6 +18,7 @@ export const posts = [
 		<h3>Step 1: Set up the Svelte project</h3>
 		<p>First, create a new Svelte project using the Vite template:</p>
 		<pre><code class="language-${codeSnipets[0].lang}">${codeSnipets[0].code}</code></pre>
+		<p>Then follow the prompts. Name the project <code>umd-library</code></p>
 		`
 	}
 ];
