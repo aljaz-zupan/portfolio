@@ -52,9 +52,8 @@
 			class="textarea textarea-bordered h-24"
 			name="message"
 			id="message"
-			value={form?.data?.message ?? ''}
-			placeholder="Something..."
-		/>
+			placeholder="Something...">{form?.data?.message ?? ''}</textarea
+		>
 		{#if form?.errors?.message}
 			<label class="label" for="name">
 				<span class="label-text-alt text-error">{form?.errors?.message[0]}</span>
