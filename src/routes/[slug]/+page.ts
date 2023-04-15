@@ -1,6 +1,6 @@
 // src/routes/[slug].ts
 import { error } from '@sveltejs/kit';
-import { posts } from '../posts';
+import { posts } from '../blog/posts';
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
