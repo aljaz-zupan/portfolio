@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { posts } from './posts';
+	export let data;
+	const { posts } = data;
 </script>
 
 <h1>Blog</h1>
