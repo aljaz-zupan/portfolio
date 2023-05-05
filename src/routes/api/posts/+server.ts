@@ -5,9 +5,10 @@ async function getPosts() {
 	let posts: Post[] = [];
 
 	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
+	console.log(paths);
 
 	for (const path in paths) {
-		const file = path[path];
+		const file = paths[path];
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && metadata in file && slug) {
