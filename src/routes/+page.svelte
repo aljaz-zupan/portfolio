@@ -1,9 +1,16 @@
 <script lang="ts">
+	/* import Section from '$lib/components/Section.svelte'; */
 	import { toastStore } from '@skeletonlabs/skeleton';
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
+<!-- <Section gradient={[{ variant: , position: 'tl' }]}>
+	<h2 class="h2">gtaetasfda ad assd</h2>
+	<p>
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla eveniet rem sunt. Sapiente alias
+		fugit ducimus dolores autem, voluptatibus minus!
+	</p>
+</Section> -->
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<h2 class="h2">Development</h2>

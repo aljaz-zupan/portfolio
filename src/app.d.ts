@@ -7,3 +7,10 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+declare interface Gradient {
+	color: any;
+	position: Position;
+}
+
+declare type Position = 't' | 'l' | 'r' | 'b' | 'tl' | 'tr' | 'bl' | 'br';

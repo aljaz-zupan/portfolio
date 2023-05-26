@@ -13,7 +13,7 @@
 		id: 'drawer-nav-1',
 		// Provide your property overrides:
 		bgDrawer: 'bg-surface-900 text-white',
-		bgBackdrop: 'bg-gradient-to-tr from-indigo-500/50 via-purple-500/50 to-pink-500/50',
+		bgBackdrop: 'bg-gradient-to-tr from-secondary-500/33 to-primary-500/33',
 		width: 'w-[280px] md:w-[480px]',
 		padding: 'p-4',
 		rounded: 'rounded-xl'
