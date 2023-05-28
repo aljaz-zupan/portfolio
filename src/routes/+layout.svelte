@@ -37,6 +37,7 @@
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase"><span class="text-primary-500">AI</span>ZEN</strong>
 			</svelte:fragment>
+			<Navigation />
 			<svelte:fragment slot="trail">
 				<button on:click={() => drawerOpen()} class="block md:hidden w-8 h-8 text-primary-500">
 					<svg
@@ -57,7 +58,7 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarRight"><Navigation /></svelte:fragment>
+	<svelte:fragment slot="sidebarRight" />
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
