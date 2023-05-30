@@ -8,12 +8,13 @@
 	import { AppShell, AppBar, Toast, Drawer, drawerStore } from '@skeletonlabs/skeleton';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import { anchorLinkOnHover } from '$lib/actions';
 
 	const drawerSettings: DrawerSettings = {
-		id: 'drawer-nav-1',
+		id: 'example-3',
 		// Provide your property overrides:
 		bgDrawer: 'bg-surface-900 text-white',
-		bgBackdrop: 'bg-gradient-to-tr from-secondary-500/33 to-primary-500/33',
+		bgBackdrop: 'bg-gradient-to-tr from-primary-600/25 via-black-900/50 to-secondary-600/25',
 		width: 'w-[280px] md:w-[480px]',
 		padding: 'p-4',
 		rounded: 'rounded-xl'
@@ -26,7 +27,7 @@
 
 <Toast />
 <Drawer position="right">
-	<Navigation />
+	<Navigation direction="col" />
 </Drawer>
 
 <!-- App Shell -->
@@ -37,8 +38,11 @@
 			<svelte:fragment slot="lead">
 				<strong class="text-xl uppercase"><span class="text-primary-500">AI</span>ZEN</strong>
 			</svelte:fragment>
-			<Navigation />
+
 			<svelte:fragment slot="trail">
+				<div class="hidden md:block">
+					<Navigation />
+				</div>
 				<button on:click={() => drawerOpen()} class="block md:hidden w-8 h-8 text-primary-500">
 					<svg
 						stroke-width="1.5"
@@ -60,5 +64,9 @@
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarRight" />
 	<!-- Page Route Content -->
-	<slot />
+	<div class="page">
+		<main>
+			<slot />
+		</main>
+	</div>
 </AppShell>

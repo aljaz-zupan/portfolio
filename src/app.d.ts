@@ -14,3 +14,5 @@ declare interface Gradient {
 }
 
 declare type Position = 't' | 'l' | 'r' | 'b' | 'tl' | 'tr' | 'bl' | 'br';
+
+declare type navigationDirection = 'row' | 'col';

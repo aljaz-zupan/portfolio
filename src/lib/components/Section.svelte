@@ -1,139 +1,62 @@
 <script lang="ts">
+	export let gradients: Gradient[] = [];
+	export let wrap: Boolean = true;
+	let className = '';
+	export { className as class };
 
-	export let gradients: Gradient[];
-
-	function returnStyle(): String {
-
-		let styleString = ""
-		
-		for (gradient of gradients) {
-
-			styleString += `background-image: radial-gradient(
-				at 100% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);`
-		}
-
-		return
-	}
-
-	function returnPosition(position: Position): String {
-		switch position {
+	const convertPosition = (position: Position) => {
+		switch (position) {
 			case 't':
-				return "50% 0%"
-			case 'b':
-				return "50% 100%"
+				return '0% 0%';
 			case 'l':
-				return "0% 50%"
+				return '0% 50%';
 			case 'r':
-				return "100% 50%"
+				return '100% 50%';
+			case 'b':
+				return '0% 100%';
 			case 'tl':
-				return "0% 0%"
+				return '0% 0%';
 			case 'tr':
-				return "100% 0%"
+				return '100% 0%';
 			case 'bl':
-				return "0% 100%"
+				return '0% 100%';
 			case 'br':
-				return "100% 100%"
+				return '100% 100%';
 			default:
-				throw Error("No valid position")
+				return '0% 0%';
 		}
-	}
+	};
+
+	const gradientStyles = gradients.map((gradient, index) => {
+		const position = convertPosition(gradient.position);
+
+		return `radial-gradient(at ${position}, rgba(var(--color-${gradient.color}-500) / 0.33) 0px, transparent 50%)`;
+	});
 </script>
 
-<section>
-	<slot />
+<section style="background-image: {gradientStyles};" class={className}>
+	<div class="section-container" class:wrap>
+		<slot />
+	</div>
 </section>
 
 <style>
-	.gradient-1 {
-		background-image: radial-gradient(
-				at 0% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 0%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
+	section .wrap {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 80rem;
+		padding: 4rem 1rem;
 	}
-
-	.gradient-2 {
-		background-image: radial-gradient(
-				at 0% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-3 {
-		background-image: radial-gradient(
-				at 100% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-4 {
-		background-image: radial-gradient(
-				at 0% 100%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-5 {
-		background-image: radial-gradient(
-				at 100% 100%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 0% 0%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-6 {
-		background-image: radial-gradient(
-				at 0% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 0% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-	.gradient-7 {
-		background-image: radial-gradient(
-				at 100% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 0% 0%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-8 {
-		background-image: radial-gradient(
-				at 0% 100%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 0% 0%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-9 {
-		background-image: radial-gradient(
-				at 100% 0%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 0% 100%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
-	}
-
-	.gradient-10 {
-		background-image: radial-gradient(
-				at 0% 100%,
-				rgba(var(--color-secondary-500) / 0.33) 0px,
-				transparent 50%
-			),
-			radial-gradient(at 100% 0%, rgba(var(--color-primary-500) / 0.33) 0px, transparent 50%);
+	@media (min-width: 768px) {
+		section .wrap {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			max-width: 80rem;
+			padding: 4rem 1rem;
+		}
 	}
 </style>

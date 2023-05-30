@@ -3,3 +3,20 @@ html,
 body {
 	@apply h-full overflow-hidden;
 }
+
+article h1 .anchor-link,
+article h2 .anchor-link,
+article h3 .anchor-link,
+article h4 .anchor-link,
+article h5 .anchor-link,
+article h6 .anchor-link {
+	visibility: hidden;
+}
+
+article h1:hover .anchor-link,
+article h4:hover .anchor-link,
+article h5:hover .anchor-link,
+article h2:hover .anchor-link,
+article h6:hover .anchor-link {
+	visibility: visible;
+}
