@@ -6,7 +6,6 @@
 	function drawerClose(): void {
 		drawerStore.close();
 	}
-	console.log(direction);
 </script>
 
 <nav
@@ -21,7 +20,5 @@
 </nav>
 
 <style>
-	nav ul li {
-		margin-top: 0;
-	}
+	
 </style>
