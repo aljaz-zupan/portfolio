@@ -1,8 +1,10 @@
 <script lang="ts">
 	// The ordering of these imports is critical to your app working properly
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
+
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
+
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell, AppBar, Toast, Drawer, drawerStore } from '@skeletonlabs/skeleton';
@@ -36,24 +38,31 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase"><span class="text-primary-500">AI</span>ZEN</strong>
+				<a href="/" class="logo-text">
+					<strong class="text-xl uppercase"><span class="text-primary-500">AI</span>ZEN</strong>
+				</a>
 			</svelte:fragment>
 
 			<svelte:fragment slot="trail">
 				<div class="hidden md:block">
 					<Navigation />
 				</div>
-				<button on:click={() => drawerOpen()} class="block md:hidden w-8 h-8 text-primary-500">
+
+				<button
+					on:click={() => drawerOpen()}
+					class="block md:hidden w-10 h-10 list-nav text-primary-500"
+				>
 					<svg
-						stroke-width="1.5"
+						stroke-width="1"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						color="#fff"
+						class="h-8"
 						><path
 							d="M3 5h18M3 12h18M3 19h18"
 							stroke="#fff"
-							stroke-width="1.5"
+							stroke-width="1"
 							stroke-linecap="round"
 							stroke-linejoin="round"
 						/></svg
@@ -70,3 +79,9 @@
 		</main>
 	</div>
 </AppShell>
+
+<style>
+	.logo-text {
+		text-decoration: dashed;
+	}
+</style>

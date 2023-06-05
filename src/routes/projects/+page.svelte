@@ -2,7 +2,7 @@
 	import Section from '$lib/components/Section.svelte';
 </script>
 
-<article>
+<Section>
 	<h1 class="h1">Projects</h1>
 	<p>
 		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis est assumenda
@@ -16,8 +16,7 @@
 		Facilis id eveniet sed tempora autem excepturi quos! Earum esse, ipsum enim expedita illo odio a
 		quaerat placeat aperiam.
 	</p>
-</article>
-
+</Section>
 <Section
 	wrap={true}
 	gradients={[
