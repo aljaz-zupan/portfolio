@@ -7,18 +7,24 @@
 
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
-	import { AppShell, AppBar, Toast, Drawer, drawerStore } from '@skeletonlabs/skeleton';
+	import {
+		AppShell,
+		AppBar,
+		Toast,
+		Drawer,
+		drawerStore,
+		LightSwitch,
+		modeCurrent
+	} from '@skeletonlabs/skeleton';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/Navigation.svelte';
-	import { anchorLinkOnHover } from '$lib/actions';
 
 	const drawerSettings: DrawerSettings = {
 		id: 'example-3',
 		// Provide your property overrides:
-		bgDrawer: 'bg-surface-900 text-white',
 		bgBackdrop: 'bg-gradient-to-tr from-primary-600/25 via-black-900/50 to-secondary-600/25',
 		width: 'w-[280px] md:w-[480px]',
-		padding: 'p-4',
+		padding: 'p-2',
 		rounded: 'rounded-xl'
 	};
 
@@ -29,7 +35,14 @@
 
 <Toast />
 <Drawer position="right">
-	<Navigation direction="col" />
+	<div class="p-4 flex flex-col justify-between">
+		<Navigation direction="col" />
+		<div class="flex flex-row">
+			Theme
+			<LightSwitch bgDark="bg-surface-600 left-12" class="mx-2 mb-4">Noč</LightSwitch>
+			{$modeCurrent ? 'Light' : 'Dark'}
+		</div>
+	</div>
 </Drawer>
 
 <!-- App Shell -->
@@ -53,15 +66,12 @@
 					class="block md:hidden w-10 h-10 list-nav text-primary-500"
 				>
 					<svg
+						class="fill-token h-8"
 						stroke-width="1"
 						viewBox="0 0 24 24"
-						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
-						color="#fff"
-						class="h-8"
 						><path
 							d="M3 5h18M3 12h18M3 19h18"
-							stroke="#fff"
 							stroke-width="1"
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -83,5 +93,15 @@
 <style>
 	.logo-text {
 		text-decoration: dashed;
+	}
+	.fill-token {
+		stroke: rgba(var(--theme-font-color-base));
+		color: rgba(var(--theme-font-color-base));
+		fill: rgba(var(--theme-font-color-base));
+	}
+	:global(.dark) .fill-token {
+		stroke: rgba(var(--theme-font-color-dark));
+		color: rgba(var(--theme-font-color-base));
+		fill: rgba(var(--theme-font-color-base));
 	}
 </style>

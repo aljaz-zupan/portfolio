@@ -40,23 +40,13 @@
 	</div>
 </section>
 
-<style>
+<style lang="postcss">
 	section .wrap {
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-		max-width: 80rem;
-		padding: 4rem 1rem;
+		@apply w-full py-16 px-4 max-w-7xl mx-auto;
 	}
 	@media (min-width: 768px) {
 		section .wrap {
-			padding-top: 6rem;
-			padding-bottom: 6rem;
-			margin-left: auto;
-			margin-right: auto;
-			width: 100%;
-			max-width: 80rem;
-			padding: 4rem 1rem;
+			@apply py-32;
 		}
 	}
 </style>
