@@ -20,14 +20,14 @@
 		>
 			{#if condition}
 				<path
-					transition:draw={{ duration: 1500, easing: quintOut }}
+					transition:draw|local={{ duration: 1500, easing: quintOut }}
 					d="M4.68 27.8H19.4L10.92 4.48L2 29H0.72L10.92 0.959999L21.12 29H4.68V27.8ZM22.7959 29H21.5959V0.999998H22.7959V29Z"
 					stroke="#D41642"
 					fill="none"
 					stroke-width="0.7px"
 				/>
 				<path
-					transition:draw={{ duration: 1500, easing: quintOut }}
+					transition:draw|local={{ duration: 1500, easing: quintOut }}
 					d="M47.6944 29H31.3744L45.6144 2.2H32.4144V0.999998H47.6144L33.3744 27.8H47.6944V29ZM63.0731 14.36H51.1931L63.4331 2.2H49.9131V27.8H65.4331V29H48.7131V0.999998H66.3531L54.1131 13.16H63.0731V14.36ZM70.28 27.8H82.68L68.36 3.04V29H67.16V0.999998H68.56L83.52 26.88V0.999998H84.72V29H70.28V27.8Z"
 					fill="none"
 					stroke-width="0.7px"
