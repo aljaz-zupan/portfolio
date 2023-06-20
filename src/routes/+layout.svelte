@@ -4,6 +4,9 @@
 
 	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	import hljs from 'highlight.js';
+	import 'highlight.js/styles/github-dark.css';
+	import { storeHighlightJs } from '@skeletonlabs/skeleton';
 
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
@@ -27,6 +30,8 @@
 		padding: 'p-2',
 		rounded: 'rounded-xl'
 	};
+
+	storeHighlightJs.set(hljs);
 
 	function drawerOpen(): void {
 		drawerStore.open(drawerSettings);
@@ -103,5 +108,8 @@
 		stroke: rgba(var(--theme-font-color-dark));
 		color: rgba(var(--theme-font-color-base));
 		fill: rgba(var(--theme-font-color-base));
+	}
+	:global(.prose .codeblock-pre) {
+		margin: 0;
 	}
 </style>

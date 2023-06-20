@@ -9,9 +9,22 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article>
-	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
-	</hgroup>
-</article>
+<div class="prose container mx-auto px-4">
+	<article>
+		<hgroup>
+			<h1 class="mb-2">{data.meta.title}</h1>
+			<p class="text-xs">Published at {formatDate(data.meta.date)}</p>
+		</hgroup>
+		
+		<div class="flex space-x-2">
+			{#each data.meta.categories as categorie}
+				<span class="chip variant-filled">#{categorie}</span>
+			{/each}
+		</div>
+		<div class="mt-12">
+			<svelte:component this={data.content}></svelte:component>
+		</div>
+		
+	</article>
+</div>
+

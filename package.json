@@ -41,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"mdsvex": "^0.10.6",
 		"zod": "^3.21.4"
 	}
 }
