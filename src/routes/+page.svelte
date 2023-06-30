@@ -13,7 +13,7 @@
 	</p>
 </Section> -->
 <div
-	class="container h-[calc(100vh-72px)] min-h-max mx-auto flex justify-center items-center text-center"
+	class="container h-[calc(100vh-72px)] min-h-max mx-auto flex justify-center text-center"
 >
 	<HeroGraphics />
 </div>

@@ -40,7 +40,7 @@
 			class="btn variant-filled"
 			on:click={() => {
 				condition = !condition;
-			}}>{condition ? 'Pobriši' : 'Nariši'}</button
+			}}>{condition ? 'Undraw' : 'Draw'}</button
 		>
 		<Avatar
 			src="https://source.unsplash.com/SyYmXSDnJ54/128x128"
@@ -49,12 +49,12 @@
 			class="animate-bounce mx-auto my-7"
 		/>
 
-		<ProgressRadial
+		<!-- <ProgressRadial
 			stroke={100}
 			meter="stroke-primary-500"
 			class="mx-auto my-7"
 			track="stroke-primary-500/30"
-		/>
+		/> -->
 
 		<ProgressBar class="w-[70%]" />
 

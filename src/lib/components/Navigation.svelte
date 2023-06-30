@@ -9,7 +9,7 @@
 </script>
 
 <nav
-	class="list-nav flex"
+	class="list-nav flex h-full"
 	class:flex-row={direction === 'row'}
 	class:flex-col={direction === 'col'}
 >

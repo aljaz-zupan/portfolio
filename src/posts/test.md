@@ -4,7 +4,7 @@ date: '2021-12-14'
 categories:
   - svelte
   - sveltekit
-description: Post number one
+description: Description for post number one
 published: true
 ---
 
