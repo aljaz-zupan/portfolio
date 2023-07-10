@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-
 	import '../app.css';
 	import Navbar from '$lib/menu/Navbar.svelte';
 	import Drawer from '$lib/menu/Drawer.svelte';
