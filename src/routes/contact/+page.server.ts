@@ -26,7 +26,6 @@ export const actions: Actions = {
 
 		try {
 			const result = registerSchema.parse(formData);
-			console.log('resultFormData', result);
 			const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSdGwHFlGE9I64cX3hyGDkQx1-4i-dxNwbgkwixA_L38mmPXPw/formResponse?usp=pp_url&entry.1476163538=${result.name}&entry.1140627475=${result.email}&entry.1122378468=${result.message}&submit=Submit`;
 
 			const res = await fetch(prefilledLink);

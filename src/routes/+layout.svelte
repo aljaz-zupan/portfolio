@@ -15,12 +15,12 @@
 		AppBar,
 		Toast,
 		Drawer,
-		drawerStore,
 		LightSwitch,
-		modeCurrent
+		modeCurrent,
+		type DrawerSettings
 	} from '@skeletonlabs/skeleton';
-	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import { drawerClose, drawerOpen } from '$lib/utils';
 
 	const drawerSettings: DrawerSettings = {
 		id: 'example-3',
@@ -33,28 +33,41 @@
 
 	storeHighlightJs.set(hljs);
 
-	function drawerOpen(): void {
+	/* 	function drawerOpen(): void {
 		drawerStore.open(drawerSettings);
 	}
 
 	function drawerClose(): void {
 		drawerStore.close();
-	}
+	} */
 </script>
 
 <Toast />
 <Drawer position="right">
 	<div class="p-4 flex flex-col justify-between h-full">
 		<div class="flex flex-row justify-end">
-			<button on:click={() => drawerClose()}
-				class="block md:hidden w-10 h-10 list-nav text-primary-500 flex-none">
-				<svg stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-token h-8"><path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+			<button
+				on:click={() => drawerClose()}
+				class="block md:hidden w-10 h-10 list-nav text-primary-500 flex-none"
+			>
+				<svg
+					stroke-width="1"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+					class="fill-token h-8"
+					><path
+						d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
+						stroke-width="1"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/></svg
+				>
 			</button>
 		</div>
 		<Navigation direction="col" />
 		<div class="flex flex-row justify-end">
 			Current theme
-			<LightSwitch bgDark="bg-surface-600 left-12" class="mx-2 mb-4"></LightSwitch>
+			<LightSwitch bgDark="bg-surface-600 left-12" class="mx-2 mb-4" />
 			{$modeCurrent ? 'Light' : 'Dark'}
 		</div>
 	</div>
@@ -72,7 +85,8 @@
 			</svelte:fragment>
 
 			<svelte:fragment slot="trail">
-				<div class="hidden md:block">
+				<div class="hidden md:flex md:flex-row justify-center">
+					<LightSwitch bgDark="bg-surface-600" class="self-center mr-8" />
 					<Navigation />
 				</div>
 

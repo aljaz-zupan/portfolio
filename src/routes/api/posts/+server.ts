@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { Post } from '$lib/types';
+import nodePath from 'node:path';
 
 async function getPosts() {
 	let posts: Post[] = [];
@@ -8,11 +9,14 @@ async function getPosts() {
 
 	for (const path in paths) {
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
+		const href = nodePath.parse(path).name;
 
-		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const metadata = file.metadata as Omit<Post, 'slug'>;
-			const post = { ...metadata, slug } satisfies Post;
+		if (file && typeof file === 'object' && 'metadata' in file && href) {
+			const metadata = file.metadata as Omit<Post, 'href'>;
+			const post = {
+				...metadata,
+				href: nodePath.resolve('/blog', href)
+			} satisfies Post;
 			post.published && posts.push(post);
 		}
 	}

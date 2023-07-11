@@ -2,11 +2,12 @@ export type Categories = 'sveltekit' | 'svelte';
 
 export type Post = {
 	title: string;
-	slug: string;
+	/* slug: string; */
 	description: string;
 	date: string;
 	categories: Categories[];
 	published: boolean;
+	href: string;
 };
 
 // export type Params = {
