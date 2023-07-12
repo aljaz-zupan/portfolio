@@ -1,7 +1,9 @@
 <script lang="ts">
 	import HeroGraphics from '$lib/components/HeroGraphics.svelte';
-	import Section from '$lib/components/Section.svelte';
 	import { toastStore } from '@skeletonlabs/skeleton';
+	import { Canvas } from '@threlte/core';
+	import { Theatre } from '@threlte/theatre';
+	import Scene from '$lib/components/Scene.svelte';
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
@@ -12,9 +14,14 @@
 		fugit ducimus dolores autem, voluptatibus minus!
 	</p>
 </Section> -->
-<div
-	class="container h-[calc(100vh-72px)] min-h-max mx-auto flex justify-center text-center"
->
+<div class="w-screen h-screen relative">
+	<Canvas>
+		<Theatre>
+			<Scene />
+		</Theatre>
+	</Canvas>
+</div>
+<div class="container h-[calc(100vh-72px)] min-h-max mx-auto flex justify-center text-center">
 	<HeroGraphics />
 </div>
 
