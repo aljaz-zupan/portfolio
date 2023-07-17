@@ -6,13 +6,15 @@
 
 	const css_variable = document.querySelector(':root');
 
-	function return_HSL_value(variable: string = '--color-primary-500'): string {
+	function return_RGB_value(variable: string = '--color-primary-500'): string {
 		if (css_variable === null) return '';
 		const value = getComputedStyle(css_variable);
 		const variable_value = value.getPropertyValue(variable);
-		// console.log('variable value', variable_value);
+		const variable_opacity = value.getPropertyValue('--tw-text-opacity');
+		console.log('variable value', variable_value);
 		const [h, s, l] = variable_value.split(' ');
-		return `hsl(${h}, ${s}%, ${l}%)`;
+		/* return `rgba(var(--color-primary-500) / var(--tw-text-opacity))`; */
+		return `rgb(${h}, ${s}, ${l})`;
 	}
 </script>
 
@@ -20,8 +22,8 @@
 
 <Grid
 	position.y={-0.001}
-	cellColor="#ffffff"
-	sectionColor={return_HSL_value('--color-primary-500')}
+	cellColor={return_RGB_value('--color-success-500')}
+	sectionColor={return_RGB_value('--color-primary-500')}
 	sectionThickness={2}
 	fadeDistance={30}
 	fadeStrength={2}
@@ -33,6 +35,9 @@
 
 <T.Mesh
 	position={[0, 3, 0]}
-	material={new MeshBasicMaterial({ wireframe: true, color: 'hsl(212, 22%, 60%)' })}
+	material={new MeshBasicMaterial({
+		wireframe: true,
+		color: return_RGB_value('--color-tertiary-500')
+	})}
 	geometry={new SphereGeometry(3, 22, 20)}
 />
