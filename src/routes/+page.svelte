@@ -2,7 +2,6 @@
 	import HeroGraphics from '$lib/components/HeroGraphics.svelte';
 	import { toastStore } from '@skeletonlabs/skeleton';
 	import { Canvas } from '@threlte/core';
-	import { Theatre } from '@threlte/theatre';
 	import Scene from '$lib/components/Scene.svelte';
 </script>
 
@@ -14,7 +13,7 @@
 		fugit ducimus dolores autem, voluptatibus minus!
 	</p>
 </Section> -->
-<div class="w-screen h-screen relative">
+<div class="w-screen h-screen relative hero--canvas">
 	<Canvas>
 		<Scene />
 	</Canvas>
@@ -52,6 +51,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-</style>
