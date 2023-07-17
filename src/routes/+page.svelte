@@ -3,6 +3,7 @@
 	import { toastStore } from '@skeletonlabs/skeleton';
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/components/Scene.svelte';
+	import { browser } from '$app/environment';
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
@@ -14,9 +15,11 @@
 	</p>
 </Section> -->
 <div class="w-screen h-screen relative hero--canvas">
-	<Canvas>
-		<Scene />
-	</Canvas>
+	{#if browser}
+		<Canvas>
+			<Scene />
+		</Canvas>
+	{/if}
 </div>
 <div class="container h-[calc(100vh-72px)] min-h-max mx-auto flex justify-center text-center">
 	<HeroGraphics />

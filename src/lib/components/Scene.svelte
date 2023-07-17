@@ -24,10 +24,11 @@
 	position.y={-0.001}
 	cellColor={return_RGB_value('--color-success-500')}
 	sectionColor={return_RGB_value('--color-primary-500')}
-	sectionThickness={2}
+	sectionThickness={5}
 	fadeDistance={30}
 	fadeStrength={2}
 	cellSize={1}
+	cellThickness={1.5}
 	infiniteGrid={true}
 />
 
