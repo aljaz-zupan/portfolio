@@ -22,7 +22,7 @@
 
 <Grid
 	position.y={-0.001}
-	cellColor={return_RGB_value('--color-success-500')}
+	cellColor={return_RGB_value('--color-tertiary-700')}
 	sectionColor={return_RGB_value('--color-primary-500')}
 	sectionThickness={5}
 	fadeDistance={30}
@@ -38,7 +38,7 @@
 	position={[0, 3, 0]}
 	material={new MeshBasicMaterial({
 		wireframe: true,
-		color: return_RGB_value('--color-tertiary-500')
+		color: return_RGB_value('--color-tertiary-700')
 	})}
 	geometry={new SphereGeometry(3, 22, 20)}
 />
