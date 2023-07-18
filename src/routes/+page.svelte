@@ -14,6 +14,12 @@
 		fugit ducimus dolores autem, voluptatibus minus!
 	</p>
 </Section> -->
+<div class="relative w-full mx-auto">
+	<div class="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5">
+		<div class="w-5 h-5 rounded-full bg-primary-500" />
+		<div class="w-1 sm:h-80 h-40 bg-gradient-to-b from-primary-500" />
+	</div>
+</div>
 <div class="w-screen h-screen relative hero--canvas">
 	{#if browser}
 		<Canvas>
