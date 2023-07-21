@@ -66,7 +66,7 @@
 		</div>
 		<Navigation direction="col" />
 		<div class="flex flex-row justify-end">
-			Current theme
+			Switch theme
 			<LightSwitch bgDark="bg-surface-600 left-12" class="mx-2 mb-4" />
 			{$modeCurrent ? 'Light' : 'Dark'}
 		</div>

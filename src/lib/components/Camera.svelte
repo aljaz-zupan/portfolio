@@ -3,7 +3,7 @@
 	import { OrbitControls } from '@threlte/extras';
 </script>
 
-<T.PerspectiveCamera makeDefault position={[0, 12, 20]} fov={36} target={[0, 0, 0]}>
+<T.PerspectiveCamera makeDefault position={[0, 12, 20]} fov={40}>
 	<OrbitControls
 		autoRotate
 		autoRotateSpeed={2}

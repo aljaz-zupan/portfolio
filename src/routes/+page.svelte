@@ -15,9 +15,23 @@
 	</p>
 </Section> -->
 <div class="relative w-full mx-auto">
-	<div class="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5">
-		<div class="w-5 h-5 rounded-full bg-primary-500" />
-		<div class="w-1 sm:h-80 h-40 bg-gradient-to-b from-primary-500" />
+	<div class="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 px-2">
+		<div class="flex flex-col justify-center items-center">
+			<div class="w-4 h-4 rounded-full bg-primary-500" />
+			<div class="w-1 sm:h-80 h-40 bg-gradient-to-b from-primary-500 m-0 p-0" />
+		</div>
+		<div>
+			<h1
+				class="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2"
+			>
+				Hi, I'm <span class="text-primary-500">Aljaž</span>
+			</h1>
+			<p
+				class="text-primrary-500 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2"
+			>
+				I love to create applications, 3D visuals, tools and user interfaces out of coffe
+			</p>
+		</div>
 	</div>
 </div>
 <div class="w-screen h-screen relative hero--canvas">
