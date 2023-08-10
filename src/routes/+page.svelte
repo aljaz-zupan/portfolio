@@ -65,6 +65,7 @@
 
 		<!-- / -->
 		<div class="flex justify-center space-x-2">
+			<a href="bet365://#/IP/EV15935907182C1/">Match</a>
 			<button
 				on:click={() => toastStore.trigger({ message: 'Test on click!' })}
 				class="btn variant-ghost"
@@ -74,3 +75,14 @@
 		</div>
 	</div>
 </div>
+
+<div class="h-screen w-full flex justify-center align-middle content-center text-center">
+	<p>
+		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quaerat, doloremque dolore,
+		culpa nemo qui quidem quia tempora deserunt nihil cumque ratione, sunt ea unde at totam dolor ut
+		alias.
+	</p>
+</div>
+
+<style>
+</style>

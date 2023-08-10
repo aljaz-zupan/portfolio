@@ -1,9 +1,15 @@
 <script lang="ts">
 	import { T, useLoader } from '@threlte/core';
-	import { Grid, GLTF, ContactShadows, useGltf } from '@threlte/extras';
-	import { AmbientLight, MeshBasicMaterial, PointLight, SphereGeometry } from 'three';
+	import { browser } from '$app/environment';
+	import { Grid } from '@threlte/extras';
 	import Camera from './Camera.svelte';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+	import { onMount, onDestroy } from 'svelte';
+	import { Pane } from 'tweakpane';
+
+	const carParams = {
+		position: { x: -2, y: 0, z: 5 }
+	};
 
 	const css_variable = document.querySelector(':root');
 
@@ -12,20 +18,47 @@
 		const value = getComputedStyle(css_variable);
 		const variable_value = value.getPropertyValue(variable);
 		const variable_opacity = value.getPropertyValue('--tw-text-opacity');
-		console.log('variable value', variable_value);
 		const [h, s, l] = variable_value.split(' ');
-		/* return `rgba(var(--color-primary-500) / var(--tw-text-opacity))`; */
 		return `rgb(${h}, ${s}, ${l})`;
 	}
-	const gltf = useLoader(GLTFLoader).load('/supercat_gemera/scene.gltf');
+
+	const gltf = useLoader(GLTFLoader).load('./supercar_gemera/scene.gltf');
+
+	let rotation: number = 0;
+	let y = 0;
+
+	onMount(() => {
+		const handleScroll = () => {
+			rotation = y * 0.1;
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
+	$: {
+		rotation = y * 0.1;
+		console.log('rotation', rotation);
+	}
+	if (browser) {
+		const pane = new Pane({ title: 'Scene' });
+
+		const carControls = pane.addFolder({ title: 'Car' });
+		carControls.addBinding(carParams, 'position');
+
+		carControls.on('change', (value) => {
+			carParams.position = value as any;
+		});
+	}
 </script>
 
-<Camera />
-<!-- <T.DirectionalLight position={[0, 10, 10]} castShadow /> -->
-<!-- <T.SpotLight color={'bg-blue-500'} position={[0, 10, 0]} />-->
-<T.SpotLight color={'bg-blue-700'} position={[0, 10, -40]} />
-<T.SpotLight position={[40, 10, 10]} />
-<T.SpotLight position={[0, 10, 30]} />
+<svelte:window bind:scrollY={y} />
+
+<Camera rotation />
+<T.DirectionalLight position={[0, 10, 10]} intensity={1} />
 <Grid
 	position.y={-0.001}
 	cellColor={return_RGB_value('--color-tertiary-700')}
@@ -38,17 +71,12 @@
 	infiniteGrid={true}
 />
 
-{#await useGltf('./supercar_gemera/scene.gltf') then gltf}
-	<T is={gltf.scene} scale={0.2} castShadow={true} receiveShadow={true} position={[-2, 0, 5]} />
-{/await}
-
-<!-- <ContactShadows scale={10} blur={2} far={2.5} opacity={0.5} /> -->
-
-<!-- <T.Mesh
-	position={[0, 3, 0]}
-	material={new MeshBasicMaterial({
-		wireframe: true,
-		color: return_RGB_value('--color-tertiary-700')
-	})}
-	geometry={new SphereGeometry(3, 22, 20)}
-/> -->
+{#if $gltf && browser}
+	<T
+		is={$gltf.scene}
+		scale={0.2}
+		castShadow={true}
+		receiveShadow={true}
+		position={[carParams.position.x, carParams.position.y, carParams.position.z]}
+	/>
+{/if}

@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { T } from '@threlte/core';
 	import { OrbitControls } from '@threlte/extras';
+
+	export let rotation;
 </script>
 
-<T.PerspectiveCamera makeDefault position={[0, 12, 20]} fov={40}>
-	<OrbitControls
-		autoRotate
-		autoRotateSpeed={2}
-		enabled={false}
-		enableDamping={false}
-		enablePan={false}
-		enableRotate={false}
-		enableZoom={false}
-	/>
-</T.PerspectiveCamera>
+<T.PerspectiveCamera
+	makeDefault
+	position={[15, 12, 20]}
+	fov={40}
+	on:create={({ ref }) => {
+		ref.lookAt(0, 0, 0);
+		0;
+	}}
+/>
