@@ -136,4 +136,7 @@
 	:global(.prose .codeblock-pre) {
 		margin: 0;
 	}
+	:global(.tp-dfwv) {
+		top: 100px !important;
+	}
 </style>

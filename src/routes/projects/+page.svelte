@@ -4,18 +4,10 @@
 
 <Section>
 	<h1 class="h1">Projects</h1>
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis est assumenda
-		unde commodi exercitationem et voluptate architecto sunt ut iure consectetur iusto dolor autem
-		deleniti dolore obcaecati, labore nisi? Iste sed sit tenetur, omnis tempora voluptate neque
-		error. Earum assumenda repellendus ullam quam quasi, culpa veniam necessitatibus veritatis autem
-		temporibus accusantium harum repellat aliquam illo eveniet nemo expedita eum aut porro ducimus
-		nulla neque corrupti! Porro odit sunt nobis! Accusantium esse at est illum ullam eligendi
-		possimus reiciendis voluptatum repudiandae. Unde veritatis praesentium, quam veniam ipsam
-		aperiam tempora enim dignissimos adipisci, iste provident, quo similique fugit non in est illum.
-		Facilis id eveniet sed tempora autem excepturi quos! Earum esse, ipsum enim expedita illo odio a
-		quaerat placeat aperiam.
-	</p>
+	<p>Some stuff to learn</p>
+	<ul>
+		<li>Webassembly (using Rust)</li>
+	</ul>
 </Section>
 <Section
 	wrap={true}

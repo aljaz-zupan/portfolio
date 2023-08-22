@@ -4,6 +4,16 @@
 	import { Canvas } from '@threlte/core';
 	import Scene from '$lib/components/Scene.svelte';
 	import { browser } from '$app/environment';
+	import { useProgress } from '@threlte/extras';
+	import { tweened } from 'svelte/motion';
+	import { fade } from 'svelte/transition';
+
+	const { progress } = useProgress();
+
+	const tweenedProgress = tweened($progress, {
+		duration: 800
+	});
+	$: tweenedProgress.set($progress);
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
@@ -22,7 +32,7 @@
 		</div>
 		<div>
 			<h1
-				class="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2"
+				class="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 leading-normal"
 			>
 				Hi, I'm <span class="text-primary-500">Aljaž</span>
 			</h1>
@@ -36,6 +46,19 @@
 </div>
 <div class="w-screen h-screen relative hero--canvas">
 	{#if browser}
+		{#if $tweenedProgress < 1}
+			<div
+				transition:fade|local={{
+					duration: 200
+				}}
+				class="wrapper text-primary-500"
+			>
+				<p class="loading">Loading</p>
+				<div class="bar-wrapper border-tertiary-500">
+					<div class="bar bg-primary-500" style="width: {$tweenedProgress * 100}%" />
+				</div>
+			</div>
+		{/if}
 		<Canvas>
 			<Scene />
 		</Canvas>
@@ -85,4 +108,35 @@
 </div>
 
 <style>
+	.wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: transparent;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		align-items: center;
+		justify-content: center;
+		/* color: black; */
+	}
+
+	.loading {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.bar-wrapper {
+		width: 33.333333%;
+		height: 10px;
+		border: 1px solid black;
+		position: relative;
+	}
+
+	.bar {
+		height: 100%;
+		/* background-color: black; */
+	}
 </style>
