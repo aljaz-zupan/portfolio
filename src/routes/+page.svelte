@@ -9,6 +9,7 @@
 	import { fade } from 'svelte/transition';
 
 	const { progress } = useProgress();
+	let scrollContainer, containerTop;
 
 	const tweenedProgress = tweened($progress, {
 		duration: 800
@@ -24,6 +25,7 @@
 		fugit ducimus dolores autem, voluptatibus minus!
 	</p>
 </Section> -->
+<svelte:fragment bind:this={scrollContainer} on:scroll={()=> console.log(scrollContainer.scrollTop) }>
 <div class="relative w-full mx-auto">
 	<div class="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 px-2">
 		<div class="flex flex-col justify-center items-center">
@@ -106,6 +108,7 @@
 		alias.
 	</p>
 </div>
+</svelte:fragment>
 
 <style>
 	.wrapper {

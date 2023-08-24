@@ -4,9 +4,11 @@
 	import { Grid } from '@threlte/extras';
 	import Camera from './Camera.svelte';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { BladeApi, Pane, TpChangeEvent } from 'tweakpane';
 	import type { BladeController, View } from '@tweakpane/core';
+
+	let y = 0;
 
 	const carParams = {
 		position: { x: -2, y: 0, z: 5 }
@@ -40,23 +42,23 @@
 	const gltf = useLoader(GLTFLoader).load('./supercar_gemera/scene.gltf');
 
 	let camera_position: number = 0;
-	let y = 0;
+	
 
-	onMount(() => {
-		const handleScroll = () => {
-			camera_position = y * 0.1;
-		};
+	// onMount(() => {
+	// 	const handleScroll = () => {
+	// 		camera_position = y * 0.1;
+	// 	};
 
-		window.addEventListener('scroll', handleScroll);
+	// 	window.addEventListener('scroll', handleScroll);
 
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	});
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll);
+	// 	};
+	// });
 
 	$: {
-		camera_position = y * 0.1;
-		console.log('camera_position', camera_position);
+		// camera_position = y * 0.1;
+		console.log('camera_position', y);
 	}
 	if (browser) {
 		const pane = new Pane({ title: 'Scene' });
@@ -75,12 +77,18 @@
 			title: 'Camera'
 		});
 		cameraFolder.addBinding(cameraParams, 'position');
+		cameraFolder.on('change', ({value: {x,y,z}}: any) => {
+			cameraParams.position.x = x;
+			cameraParams.position.y = y;
+			cameraParams.position.z = z;
+		})
 	}
+
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<Camera cameraParams />
+<Camera {cameraParams} />
 <T.DirectionalLight position={[0, 10, 10]} intensity={1} />
 <Grid
 	position.y={-0.001}
