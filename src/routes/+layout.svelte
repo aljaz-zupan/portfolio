@@ -40,7 +40,9 @@
 	function drawerClose(): void {
 		drawerStore.close();
 	} */
+	let scrollContainer, containerTop;
 </script>
+
 
 <Toast />
 <Drawer position="right">
@@ -113,7 +115,7 @@
 	<svelte:fragment slot="sidebarRight" />
 	<!-- Page Route Content -->
 	<div class="page">
-		<main>
+		<main bind:this={scrollContainer} on:scroll={()=> console.log(scrollContainer) }>
 			<slot />
 		</main>
 	</div>
