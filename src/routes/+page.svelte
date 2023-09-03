@@ -25,6 +25,7 @@
 	</p>
 </Section> -->
 
+
 <div class="relative w-full mx-auto">
 	<div class="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 px-2">
 		<div class="flex flex-col justify-center items-center">

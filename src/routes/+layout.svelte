@@ -21,6 +21,7 @@
 	} from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import { drawerClose, drawerOpen } from '$lib/utils';
+	import { onMount, type ComponentEvents } from 'svelte';
 
 	const drawerSettings: DrawerSettings = {
 		id: 'example-3',
@@ -40,7 +41,10 @@
 	function drawerClose(): void {
 		drawerStore.close();
 	} */
-	let scrollContainer, containerTop;
+	
+function scrollHandler(event: ComponentEvents<AppShell>['scroll']) {
+	console.log(event.currentTarget.scrollTop);
+}
 </script>
 
 
@@ -76,7 +80,7 @@
 </Drawer>
 
 <!-- App Shell -->
-<AppShell slotSidebarRight="w-0 md:w-52">
+<AppShell slotSidebarRight="w-0 md:w-52" on:scroll={scrollHandler}>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
 		<AppBar>
@@ -114,11 +118,10 @@
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarRight" />
 	<!-- Page Route Content -->
-	<div class="page">
-		<main bind:this={scrollContainer} on:scroll={()=> console.log(scrollContainer) }>
-			<slot />
-		</main>
-	</div>
+	
+	<main bind:this={scrollContainer}>
+		<slot />
+	</main>
 </AppShell>
 
 <style>
