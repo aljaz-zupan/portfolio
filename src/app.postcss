@@ -1,37 +1,9 @@
-/*place global styles here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
 html,
 body {
 	@apply h-full overflow-hidden;
-}
-
-:root {
-	--theme-rounded-base: 8px;
-	--theme-rounded-container: 8px;
-}
-
-.prose {
-	max-width: 100ch;
-}
-
-article h1 .anchor-link,
-article h2 .anchor-link,
-article h3 .anchor-link,
-article h4 .anchor-link,
-article h5 .anchor-link,
-article h6 .anchor-link {
-	visibility: hidden;
-}
-
-article h1:hover .anchor-link,
-article h4:hover .anchor-link,
-article h5:hover .anchor-link,
-article h2:hover .anchor-link,
-article h6:hover .anchor-link {
-	visibility: visible;
-}
-
-.hero--canvas > canvas {
-	touch-action: auto !important;
-	position: fixed;
-	z-index: -1;
 }
