@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Canvas } from '@threlte/core';
+	import Scene from '../components/Scene.svelte';
 	import { sum } from '$lib/pkg/sum';
 
 	let largeArray = new Int32Array(1e6).fill(1);
@@ -17,6 +19,12 @@
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+
+<div class="h-[500vh]">
+	<Canvas>
+		<Scene />
+	</Canvas>
+</div>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
