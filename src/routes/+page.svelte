@@ -20,13 +20,13 @@
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="h-[500vh]">
+<div class="main--banner h-[500vh] relative">
 	<Canvas>
 		<Scene />
 	</Canvas>
 </div>
 
-<div class="container h-full mx-auto flex justify-center items-center">
+<div class="container h-screen mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<h2 class="h2">Welcome to Skeleton.</h2>
 		<!-- Animated Logo -->
@@ -87,5 +87,9 @@
 		50% {
 			transform: scale(1.5);
 		}
+	}
+
+	:global(.main-banner canvas) {
+		height: 500px;
 	}
 </style>
