@@ -1,20 +1,35 @@
 <script lang="ts">
-	import type { Color } from 'three';
-	import { T, useFrame } from '@threlte/core';
-	import { interactivity } from '@threlte/extras';
-	import { spring } from 'svelte/motion';
+	import { T } from '@threlte/core';
+	import { Color, type Vector3Tuple } from 'three';
 
-	interactivity();
-	const scale = spring(1);
-	let rotation = 0;
-	useFrame((state, delta) => {
-		rotation += delta;
-	});
+	// Scroll position store
+	import { scrollPosition } from '../store/scroll_store';
+
+	let meshRotation = 0;
+	let [cameraX, cameraY, cameraZ] = Array(3).fill(0);
+	let cameraPosition: Vector3Tuple = [10, 10, 10];
+	let scale = 1;
+	$: {
+		meshRotation = $scrollPosition * 0.001;
+		cameraX = $scrollPosition * 0.0003 + 10;
+		cameraY = $scrollPosition * 0.002 + 10;
+
+		if ($scrollPosition < 2000) {
+			cameraZ = $scrollPosition * -0.009 + 10;
+		} else {
+			cameraZ = $scrollPosition * 0.0009 + 10;
+		}
+
+		cameraPosition = [cameraX, cameraY, cameraZ];
+		scale = $scrollPosition * 0.0005 + 1;
+	}
+
+	let meshColor = new Color('#fe3d00');
 </script>
 
 <T.PerspectiveCamera
 	makeDefault
-	position={[10, 10, 10]}
+	position={cameraPosition}
 	on:create={({ ref }) => {
 		ref.lookAt(0, 1, 0);
 	}}
@@ -22,13 +37,7 @@
 
 <T.DirectionalLight position={[0, 10, 10]} />
 
-<T.Mesh
-	rotation.y={rotation}
-	position.y={1}
-	scale={$scale}
-	on:pointerenter={() => scale.set(1.5)}
-	on:pointerleave={() => scale.set(1)}
->
+<T.Mesh {scale} rotation.y={meshRotation} position={[0, 0, 0]}>
 	<T.BoxGeometry args={[1, 2, 1]} />
-	<T.MeshStandardMaterial color="hotpink" />
+	<T.MeshStandardMaterial color={meshColor} />
 </T.Mesh>

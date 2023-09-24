@@ -20,10 +20,21 @@
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="main--banner h-[500vh] relative">
-	<Canvas>
-		<Scene />
-	</Canvas>
+<div class="main--banner">
+	<div class="h-screen sticky top-0 z-0">
+		<Canvas>
+			<Scene />
+		</Canvas>
+	</div>
+	<div class="h-[300vh] z-1">
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dicta repellat nobis, a
+			officiis perspiciatis possimus commodi vero quaerat quo sunt provident laborum unde veniam
+			sequi, itaque laudantium ut debitis voluptatibus maxime sed consectetur neque expedita! Et, ea
+			tenetur earum animi natus possimus esse, quis consectetur eligendi veniam quaerat reiciendis
+			accusamus. Officiis, magni animi! Explicabo alias quidem blanditiis cumque.
+		</p>
+	</div>
 </div>
 
 <div class="container h-screen mx-auto flex justify-center items-center">
