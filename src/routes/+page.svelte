@@ -21,12 +21,12 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="main--banner">
-	<div class="h-screen sticky top-0 z-0">
+	<div class="h-screen sticky top-0 z-1">
 		<Canvas>
 			<Scene />
 		</Canvas>
 	</div>
-	<div class="h-[300vh] z-1">
+	<div class="h-[300vh] relative z-2">
 		<p>
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dicta repellat nobis, a
 			officiis perspiciatis possimus commodi vero quaerat quo sunt provident laborum unde veniam
@@ -98,9 +98,5 @@
 		50% {
 			transform: scale(1.5);
 		}
-	}
-
-	:global(.main-banner canvas) {
-		height: 500px;
 	}
 </style>

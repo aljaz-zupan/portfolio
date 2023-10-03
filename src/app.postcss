@@ -8,6 +8,36 @@ body {
 	@apply h-full overflow-hidden;
 }
 
-canvas {
-	@apply absolute top-0;
+.prose {
+	max-width: 100ch;
+	color: var(--theme-text-color-base);
+
+	a,
+	li::marker,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	th {
+		color: var(--theme-text-color-base);
+	}
+}
+
+article h1 .anchor-link,
+article h2 .anchor-link,
+article h3 .anchor-link,
+article h4 .anchor-link,
+article h5 .anchor-link,
+article h6 .anchor-link {
+	visibility: hidden;
+}
+
+article h1:hover .anchor-link,
+article h4:hover .anchor-link,
+article h5:hover .anchor-link,
+article h2:hover .anchor-link,
+article h6:hover .anchor-link {
+	visibility: visible;
 }

@@ -6,7 +6,9 @@
 		LightSwitch,
 		modeCurrent,
 		initializeStores,
-		getDrawerStore
+		getDrawerStore,
+		storePopup,
+		storeHighlightJs
 	} from '@skeletonlabs/skeleton';
 	initializeStores();
 
@@ -23,17 +25,14 @@
 		// console.log(event.currentTarget.scrollTop);
 		scrollPosition.set(event.currentTarget.scrollTop);
 	}
-	1;
 
 	// Highlight JS
 	import hljs from 'highlight.js';
 	import 'highlight.js/styles/github-dark.css';
-	import { storeHighlightJs } from '@skeletonlabs/skeleton';
 	storeHighlightJs.set(hljs);
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
-	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
@@ -108,3 +107,25 @@
 	<!-- Page Route Content -->
 	<slot />
 </AppShell>
+
+<style>
+	.logo-text {
+		text-decoration: dashed;
+	}
+	.fill-token {
+		stroke: rgba(var(--theme-font-color-base));
+		color: rgba(var(--theme-font-color-base));
+		fill: rgba(var(--theme-font-color-base));
+	}
+	:global(.dark) .fill-token {
+		stroke: rgba(var(--theme-font-color-dark));
+		color: rgba(var(--theme-font-color-base));
+		fill: rgba(var(--theme-font-color-base));
+	}
+	:global(.prose .codeblock-pre) {
+		margin: 0;
+	}
+	:global(.tp-dfwv) {
+		top: 100px !important;
+	}
+</style>
