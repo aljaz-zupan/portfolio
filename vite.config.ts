@@ -5,7 +5,17 @@ import wasm from 'vite-plugin-wasm';
 import topLevelAwait from 'vite-plugin-top-level-await';
 
 export default defineConfig({
-	plugins: [wasm(), topLevelAwait(), sveltekit(), purgeCss()],
+	plugins: [
+		wasm(),
+		topLevelAwait(),
+		sveltekit(),
+		purgeCss({
+			safelist: {
+				// any selectors that begin with "hljs-" will not be purged
+				greedy: [/^hljs-/]
+			}
+		})
+	],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},

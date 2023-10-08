@@ -28,6 +28,20 @@
 
 	// Highlight JS
 	import hljs from 'highlight.js';
+	import xml from 'highlight.js/lib/languages/xml';
+	import json from 'highlight.js/lib/languages/json';
+	import css from 'highlight.js/lib/languages/css';
+	import javascript from 'highlight.js/lib/languages/javascript';
+	import typescript from 'highlight.js/lib/languages/typescript';
+	import rust from 'highlight.js/lib/languages/rust';
+
+	hljs.registerLanguage('xml', xml);
+	hljs.registerLanguage('json', json);
+	hljs.registerLanguage('css', css);
+	hljs.registerLanguage('javascript', javascript);
+	hljs.registerLanguage('typescript', typescript);
+	hljs.registerLanguage('rust', rust);
+
 	import 'highlight.js/styles/github-dark.css';
 	storeHighlightJs.set(hljs);
 

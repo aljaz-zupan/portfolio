@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { modeCurrent } from '@skeletonlabs/skeleton';
 	import { formatDate } from '$lib/utils';
 	export let data;
+	console.log($modeCurrent);
 </script>
 
 <svelte:head>
@@ -9,7 +11,7 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="prose container mx-auto px-4">
+<div class="section-container mx-auto px-4 prose" class:prose-invert={!$modeCurrent}>
 	<article>
 		<hgroup>
 			<h1 class="mb-2">{data.meta.title}</h1>

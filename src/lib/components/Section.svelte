@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { modeCurrent } from '@skeletonlabs/skeleton';
+	import type { GradientPosition, Gradient, Position } from '$lib/types';
 	export let gradients: Gradient[] = [];
-	export let wrap: Boolean = true;
+	export let wrap: Boolean = false;
 	let className = '';
 	export { className as class };
 
-	const convertPosition = (position: Position) => {
+	const convertPosition = (position: Position): GradientPosition => {
 		switch (position) {
 			case 't':
 				return '0% 0%';
@@ -27,15 +29,20 @@
 		}
 	};
 
-	const gradientStyles = gradients.map((gradient, index) => {
-		const position = convertPosition(gradient.position);
+	const gradientStyles = gradients.map((gradient: Gradient, index) => {
+		const position: GradientPosition = convertPosition(gradient.position);
 
 		return `radial-gradient(at ${position}, rgba(var(--color-${gradient.color}-500) / 0.33) 0px, transparent 50%)`;
 	});
 </script>
 
-<section style="background-image: {gradientStyles};" class={className}>
-	<div class="section-container" class:wrap>
+<section
+	style="background-image: {gradientStyles};"
+	class={className}
+	class:wrap
+	class:prose-invert={!$modeCurrent}
+>
+	<div class="section-container">
 		<slot />
 	</div>
 </section>

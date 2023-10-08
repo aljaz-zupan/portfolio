@@ -3,26 +3,14 @@
 @tailwind utilities;
 @tailwind variants;
 
+:root [data-theme='crimson'] {
+	--theme-rounded-base: 8px;
+	--theme-rounded-container: 8px;
+}
+
 html,
 body {
 	@apply h-full overflow-hidden;
-}
-
-.prose {
-	max-width: 100ch;
-	color: var(--theme-text-color-base);
-
-	a,
-	li::marker,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	th {
-		color: var(--theme-text-color-base);
-	}
 }
 
 article h1 .anchor-link,

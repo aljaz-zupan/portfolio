@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { modeCurrent } from '@skeletonlabs/skeleton';
 	import { enhance } from '$app/forms';
 	import Section from '$lib/components/Section.svelte';
 	export let form;
@@ -88,9 +89,9 @@
 
 	<p>There are also other ways you can contact me.</p>
 	<ul>
-		<li><a href="mailto:aljaz.zupan@gmail.com">Email</a></li>
-		<li><a href="https://www.linkedin.com/in/aljaz-zupan">LinkedIn</a></li>
-		<li><a href="https://github.com/aljaz-zupan">Github</a></li>
+		<li><a class="anchor" href="mailto:aljaz.zupan@gmail.com">Email</a></li>
+		<li><a class="anchor" href="https://github.com/aljaz-zupan">Github</a></li>
+		<li><a class="anchor" href="https://www.linkedin.com/in/aljaz-zupan">LinkedIn</a></li>
 	</ul>
 	<p>
 		Or just <a rel="noreferrer" href="https://ko-fi.com/L4L2HM2EA" target="_blank"
