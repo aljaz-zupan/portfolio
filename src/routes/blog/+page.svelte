@@ -15,7 +15,7 @@
 	]}
 	class="min-h-[calc(100vh-72px)]"
 >
-	<div class="container grid sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto px-4 mt-4">
+	<div class="container grid sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto p-4">
 		{#each data.posts as post}
 			<a href={post.href} class="card backdrop-blur-sm variant-glass-surface card-hover w-full">
 				<header>
