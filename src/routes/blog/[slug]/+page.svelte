@@ -14,7 +14,7 @@
 <div class="section-container mx-auto px-4 prose" class:prose-invert={!$modeCurrent}>
 	<article>
 		<hgroup>
-			<h1 class="mb-2">{data.meta.title}</h1>
+			<h1 class="h1 mb-2">{data.meta.title}</h1>
 			<p class="text-xs">Published at {formatDate(data.meta.date)}</p>
 		</hgroup>
 

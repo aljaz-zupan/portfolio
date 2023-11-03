@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { modeCurrent } from '@skeletonlabs/skeleton';
 	import { enhance } from '$app/forms';
 	import Section from '$lib/components/Section.svelte';
 	export let form;
