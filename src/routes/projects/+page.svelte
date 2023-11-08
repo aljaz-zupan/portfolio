@@ -1,13 +1,16 @@
 <script lang="ts">
+	import { modeCurrent } from '@skeletonlabs/skeleton';
 	import Section from '$lib/components/Section.svelte';
 </script>
 
 <Section>
-	<h1 class="h1">Projects</h1>
-	<p>Some stuff to learn</p>
-	<ul>
-		<li>Webassembly (using Rust)</li>
-	</ul>
+	<div class="prose" class:prose-invert={!$modeCurrent}>
+		<h1 class="h1">Projects</h1>
+		<p>Some stuff to learn</p>
+		<ul>
+			<li>Webassembly (using Rust)</li>
+		</ul>
+	</div>
 </Section>
 <Section
 	wrap={true}

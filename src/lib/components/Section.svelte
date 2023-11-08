@@ -48,11 +48,11 @@
 </section>
 
 <style lang="postcss">
-	:global(section > .wrap) {
+	section .wrap {
 		@apply w-full py-16 px-4 max-w-7xl mx-auto;
 	}
 	@media (min-width: 768px) {
-		:global(section > .wrap) {
+		section .wrap {
 			@apply py-32;
 		}
 	}
