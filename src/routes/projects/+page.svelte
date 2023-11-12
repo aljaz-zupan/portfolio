@@ -3,7 +3,7 @@
 	import Section from '$lib/components/Section.svelte';
 </script>
 
-<Section>
+<Section wrap gradients={[{ position: 'bl', color: 'primary' }]}>
 	<div class="prose" class:prose-invert={!$modeCurrent}>
 		<h1 class="h1">Projects</h1>
 		<p>Some stuff to learn</p>
@@ -55,7 +55,7 @@
 	</p>
 </Section>
 
-<Section class="h-[600px]">
+<Section class="h-[600px]" gradients={[{ position: 'tl', color: 'tertiary' }]} wrap>
 	<h2>Lorem, ipsum dolor.</h2>
 	<p>
 		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic

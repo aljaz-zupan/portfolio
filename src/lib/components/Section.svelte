@@ -39,17 +39,16 @@
 <section
 	style="background-image: {gradientStyles};"
 	class={className}
-	class:wrap
 	class:prose-invert={!$modeCurrent}
 >
-	<div class="section-container">
+	<div class="section-container max-w-7xl mx-auto" class:wrap class:prose-invert={!$modeCurrent}>
 		<slot />
 	</div>
 </section>
 
 <style lang="postcss">
 	section .wrap {
-		@apply w-full py-16 px-4 max-w-7xl mx-auto;
+		@apply w-full py-16 px-4 prose;
 	}
 	@media (min-width: 768px) {
 		section .wrap {
