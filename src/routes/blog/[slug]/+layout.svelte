@@ -7,6 +7,8 @@
 		url: string[];
 	}
 
+	console.log($page);
+
 	const articleName = $page.data.meta.title;
 	let urlPath = $page.url.pathname;
 
