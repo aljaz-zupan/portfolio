@@ -41,7 +41,7 @@
 	class={className}
 	class:prose-invert={!$modeCurrent}
 >
-	<div class="section-container max-w-7xl mx-auto" class:wrap class:prose-invert={!$modeCurrent}>
+	<div class="section-container max-w-7xl mx-auto" class:wrap>
 		<slot />
 	</div>
 </section>

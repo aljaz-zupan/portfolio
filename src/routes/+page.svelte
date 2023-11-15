@@ -2,6 +2,7 @@
 	import { Canvas } from '@threlte/core';
 	import Scene from '../components/Scene.svelte';
 	import { sum } from '$lib/pkg/sum';
+	import { modeCurrent } from '@skeletonlabs/skeleton';
 
 	let largeArray = new Int32Array(1e6).fill(1);
 
@@ -26,7 +27,7 @@
 			<Scene />
 		</Canvas>
 	</div>
-	<div class="h-[300vh] relative z-2">
+	<div class="h-[300vh] relative z-2 prose mx-auto" class:prose-invert={!$modeCurrent}>
 		<p>
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dicta repellat nobis, a
 			officiis perspiciatis possimus commodi vero quaerat quo sunt provident laborum unde veniam

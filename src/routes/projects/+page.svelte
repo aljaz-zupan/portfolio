@@ -6,9 +6,11 @@
 <Section wrap gradients={[{ position: 'bl', color: 'primary' }]}>
 	<div class="prose" class:prose-invert={!$modeCurrent}>
 		<h1 class="h1">Projects</h1>
-		<p>Some stuff to learn</p>
+		<p>Some projects to learn new languages, algorithms & technology</p>
 		<ul>
+			<li>Rust</li>
 			<li>Webassembly (using Rust)</li>
+			<li>Godot using Rust & GDScript</li>
 		</ul>
 	</div>
 </Section>
@@ -20,18 +22,20 @@
 	]}
 	class="h-[600px]"
 >
-	<h2>Lorem, ipsum dolor.</h2>
-	<p>
-		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
-		exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
-		maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
-		Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus distinctio
-		deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus eligendi repellat
-		impedit veniam officia id nam quam assumenda? Unde deserunt similique repellat ab ex delectus
-		excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate voluptatem doloremque
-		quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque, aspernatur molestias facere.
-		Tempora, nulla quibusdam?
-	</p>
+	<div class="prose" class:prose-invert={!$modeCurrent}>
+		<h2>Svelte & Sveltekit</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
+			exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
+			maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
+			Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus
+			distinctio deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus
+			eligendi repellat impedit veniam officia id nam quam assumenda? Unde deserunt similique
+			repellat ab ex delectus excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate
+			voluptatem doloremque quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque,
+			aspernatur molestias facere. Tempora, nulla quibusdam?
+		</p>
+	</div>
 </Section>
 <Section
 	wrap={true}
@@ -41,31 +45,35 @@
 	]}
 	class="h-[600px]"
 >
-	<h2>Lorem, ipsum dolor.</h2>
-	<p>
-		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
-		exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
-		maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
-		Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus distinctio
-		deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus eligendi repellat
-		impedit veniam officia id nam quam assumenda? Unde deserunt similique repellat ab ex delectus
-		excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate voluptatem doloremque
-		quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque, aspernatur molestias facere.
-		Tempora, nulla quibusdam?
-	</p>
+	<div class="prose" class:prose-invert={!$modeCurrent}>
+		<h2>Lorem, ipsum dolor.</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
+			exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
+			maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
+			Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus
+			distinctio deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus
+			eligendi repellat impedit veniam officia id nam quam assumenda? Unde deserunt similique
+			repellat ab ex delectus excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate
+			voluptatem doloremque quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque,
+			aspernatur molestias facere. Tempora, nulla quibusdam?
+		</p>
+	</div>
 </Section>
 
 <Section class="h-[600px]" gradients={[{ position: 'tl', color: 'tertiary' }]} wrap>
-	<h2>Lorem, ipsum dolor.</h2>
-	<p>
-		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
-		exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
-		maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
-		Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus distinctio
-		deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus eligendi repellat
-		impedit veniam officia id nam quam assumenda? Unde deserunt similique repellat ab ex delectus
-		excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate voluptatem doloremque
-		quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque, aspernatur molestias facere.
-		Tempora, nulla quibusdam?
-	</p>
+	<div class="prose" class:prose-invert={!$modeCurrent}>
+		<h2>Lorem, ipsum dolor.</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iure debitis id unde hic
+			exercitationem voluptatum quasi cumque? Voluptatibus animi quaerat ducimus provident, natus id
+			maxime inventore officia earum sit consequatur deserunt labore, nostrum, est quo blanditiis!
+			Eaque, vero pariatur ratione voluptates iure placeat quasi esse. Cupiditate accusamus
+			distinctio deleniti, voluptas cumque officiis laudantium aspernatur maxime animi natus
+			eligendi repellat impedit veniam officia id nam quam assumenda? Unde deserunt similique
+			repellat ab ex delectus excepturi, dolor mollitia! Sint ea velit assumenda corporis cupiditate
+			voluptatem doloremque quisquam iure dolore fugit dolores eaque dolorem, deserunt cumque,
+			aspernatur molestias facere. Tempora, nulla quibusdam?
+		</p>
+	</div>
 </Section>

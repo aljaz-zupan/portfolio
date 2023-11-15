@@ -24,5 +24,5 @@
 	};
 </script>
 
-<Breadcrumbs {breadcrumb} />
+<Breadcrumbs {articleName} />
 <slot />
