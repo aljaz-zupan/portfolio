@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Canvas } from '@threlte/core';
-	import Scene from '../components/Scene.svelte';
 	import { sum } from '$lib/pkg/sum';
 	import { modeCurrent } from '@skeletonlabs/skeleton';
+	import Section from '$lib/components/Section.svelte';
 
 	let largeArray = new Int32Array(1e6).fill(1);
 
@@ -19,23 +18,21 @@
 	console.timeEnd('Sum large WASM');
 </script>
 
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
-<div class="main--banner">
-	<div class="h-screen sticky top-0 z-1">
-		<Canvas>
-			<Scene />
-		</Canvas>
-	</div>
-	<div class="h-[300vh] relative z-2 prose mx-auto" class:prose-invert={!$modeCurrent}>
-		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dicta repellat nobis, a
-			officiis perspiciatis possimus commodi vero quaerat quo sunt provident laborum unde veniam
-			sequi, itaque laudantium ut debitis voluptatibus maxime sed consectetur neque expedita! Et, ea
-			tenetur earum animi natus possimus esse, quis consectetur eligendi veniam quaerat reiciendis
-			accusamus. Officiis, magni animi! Explicabo alias quidem blanditiis cumque.
-		</p>
-	</div>
+<div class="main--banner h-screen flex flex-col">
+	<Section wrap gradients={[{ position: 'bl', color: 'primary' }]}>
+		<div class="prose" class:prose-invert={!$modeCurrent}>
+			<h1 class="h1">Hi there, I'm Aljaž</h1>
+			<p class="text-lg">
+				I'm a software engineer from Slovenia. I enjoy creating things. There are a lot of things I
+				love to create, like games, tools, browser extensions or anything that can challenge me.
+			</p>
+		</div>
+	</Section>
+	<Section wrap gradients={[{ position: 'tl', color: 'primary' }]}>
+		<div class="prose" class:prose-invert={!$modeCurrent}>
+			<p class="text-lg">T</p>
+		</div>
+	</Section>
 </div>
 
 <div class="container h-screen mx-auto flex justify-center items-center">

@@ -35,6 +35,9 @@
 			without compromising performance, making Rust an attractive option for those seeking a balance
 			between efficiency and safety
 		</p>
+		<ul>
+			<li><a href="/projects/rust">First</a></li>
+		</ul>
 	</div>
 </Section>
 <Section
